@@ -3,10 +3,10 @@ name: Run Automation Tests
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   test:
@@ -15,8 +15,8 @@ jobs:
       fail-fast: false
       matrix:
         suite:
-          - tests/test_api.py
-          - tests/test_manual.py
+          - tests/ui/login_test.py
+         
 
     steps:
       - name: Checkout code
